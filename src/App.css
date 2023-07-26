@@ -1,0 +1,237 @@
+/* .App {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width:100%; 
+  height: 100vh;
+  background: rgb(207, 207, 207);
+  color:black; 
+}
+
+.red{
+  background-color: red; 
+}
+
+.green{
+  background-color: green; 
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#year{
+  color: blue; 
+  font-weight: 500;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.label{
+  color: blue; 
+}
+
+.label-green{
+  color: green; 
+} */
+
+/* Código para el proyecto del login */
+html{
+  font-size: 62.5%; 
+}
+*{
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+
+.App{
+  width: 100vw; 
+  height: 100vh;
+  /* overflow-y: hidden; */
+}
+
+ #login-content{
+  width: 100%; 
+  height: 100%;
+  display: flex;
+}
+
+.image{
+  width: 50%; 
+  height: 100%;
+}
+
+#image-figure{
+  width: 100%;
+  height: 100%;
+}
+
+#image{
+  width: 100%;  
+}
+
+#form-section{
+  width: 50%; 
+  height: 100%;
+}
+
+#form-login{
+  width: 100%; 
+  height: 50%;
+  flex-direction: column; 
+}
+
+.inputs-content{
+  width: 60%; 
+  height: 20%;
+  display:flex; 
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.inputs-content label{
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  align-self: flex-start;
+}
+
+.inputs-content input{
+  margin-top: 2%; 
+  width: 100%;
+  height: 40%;
+  border: 1px solid rgb(177, 177, 177);
+  border-radius: 2px; 
+  /* margin-left: 5%; */
+  padding-left: 2%;  
+  align-self: center;
+}
+
+#button-content{
+  width: 50%; 
+  height: 10%;
+}
+
+#button-login{
+  background: #2F6AEC;
+  width: 100%; 
+  height: 100%;
+  border:none; 
+  color: white;
+  border-radius: 5px; 
+}
+
+.display-center{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+#content-api{
+  width: 100%; 
+  height: 100%;
+  flex-direction: column;
+}
+
+#header-api{
+  width: 100%; 
+  height: 20%;
+}
+#form-api{
+  width: 100%; 
+  height: 100%;
+  flex-direction: column; 
+}
+
+#form-api button{
+  margin-top: 2%; 
+}
+
+#results-main-content{
+  width: 100%; 
+  height: 80%;
+  flex-direction: column; 
+  display: flex; 
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#results-content{
+  width: 90%; 
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-wrap: wrap; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start;
+  text-align: center;
+}
+
+#gifs{
+  width: 100%; 
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-wrap: wrap; 
+  flex-direction: row; 
+  justify-content: flex-start;
+  display: flex; 
+}
+
+#gifs>div{
+  width: 20%; 
+  height: 20%;
+  margin: 2%;
+  margin-top: 4%;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.imgs{
+  width: 100%; 
+  height: auto;
+  object-fit: cover;
+}
+
+
+
+
+
+

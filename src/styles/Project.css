@@ -1,0 +1,222 @@
+/* Proyecto #1 */
+/* Configuraciones generales */
+body {
+    text-align: center;
+    background: #202124;
+    color: white;
+}
+
+* {
+    color: black; 
+}
+
+/* Configuraciones generales */
+
+/* Contenedor principal */
+.layout {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-areas:
+        'header header header header'
+        'nav nav nav nav'
+        'content content content lateral'
+        'footer footer footer footer';
+}
+
+/* Contenedor principal */
+
+/* Encabezado */
+.header {
+    grid-area: header;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+}
+
+.logo {
+    background: linear-gradient(90deg, rgb(88, 76, 255) 10%, rgb(0, 17, 255) 100%);
+    width: 40px;
+    height: 40px;
+    border-radius: 300px;
+    margin: 5px;
+}
+
+.play {
+    width: 0;
+    height: 0;
+    margin-top: 14px;
+    margin-left: 16px;
+    border-left: 12px solid white;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+
+}
+
+/* Encabezado */
+
+/* Barra de navegación */
+.nav {
+    grid-area: nav;
+    background: linear-gradient(90deg, rgb(88, 76, 255) 10%, rgb(0, 17, 255) 100%);
+}
+
+.nav>ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.nav li {
+    padding: 10px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    transition: all 300ms;
+}
+
+.nav a:hover {
+    transform: scale(0.94);
+}
+
+/* Barra de navegación */
+
+/* Main */
+.content {
+    grid-area: content;
+    background: #f6f7f9;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.peli-item {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px #ddd;
+    margin: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 25px;
+    padding-right: 25px;
+    flex-grow: 1; /* Permite que se reparta de mejor manera el espacio interno */
+}
+
+button,
+input[type="submit"],
+input[type="button"] {
+    width: 100px;
+    background: #0b70e1;
+    color: white;
+    border: 0;
+    outline: 0;
+    padding: 15px;
+    border-radius: 3px;
+    margin: 10px;
+    text-transform: capitalize;
+    /* Esto hace que la primera letra sea mayúscula */
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 200ms;
+}
+
+.update:hover {
+    background: #e77b00;
+}
+
+.delete:hover {
+    background: #9b0202;
+}
+
+
+
+
+/* Main */
+
+/* Aside */
+.lateral {
+    grid-area: lateral;
+    background: #f6f7f9;
+    border-left: 1px solid #ddd;
+    padding: 20px;
+    
+}
+
+.lateral>div {
+    box-sizing: border-box;
+    width: 90%;
+    margin: 20px;
+    padding-top: 20px;
+    padding-top: 10px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px #ddd;
+}
+
+/* Se incluye el formulario de edición de las películas */
+.lateral input[type="text"],
+.lateral textarea,
+#form-edit input[type="text"],
+#form-edit textarea {
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 5px;
+    background: #f6f7f9;
+    color: #454545;
+    width: 80%;
+    opacity: 4;
+    outline: 0;
+    border-color: transparent;
+}
+
+
+.not-found{
+    color: red;
+    font-size: 1.35rem;
+
+}
+/* Aside */
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    background: #d1defa;
+    color: #454545;
+    border-top: 1px solid white;
+    text-align: center;
+    text-align: left;
+    line-height: 68px;
+    padding-left: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Footer */
+
+/* Responsive */
+@media screen and (max-width: 1085px) {
+    .content {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .peli-item {
+        width: 80%;
+    }
+}
+
+/* Responsive */
