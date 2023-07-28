@@ -22,6 +22,7 @@ export const AddPeli = ({setListadoState}) => {
             title,
             description, 
         }
+        
         setPeliState(peli); // Actualizamos el estado de peli; 
         Storage('Pelis',peli); // Función importada de helpers; 
 

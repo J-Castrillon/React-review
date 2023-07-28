@@ -10,6 +10,7 @@ import { Ajax } from './components/Ajax';
 import { Giphy } from './components/Giphy';
 import { Forms } from './components/Forms';
 import { Project } from './components/Project';
+import { RouterPrincipal } from './components/Routers/RouterPrincipal';
 
 
 function App() {
@@ -73,7 +74,8 @@ function App() {
       {/* <Ajax /> */}
       {/* <Giphy /> */}
       {/* <Forms /> */}
-      <Project />
+      {/* <Project /> */}
+      <RouterPrincipal /> {/* Cargar el enrutador */}
     </div>
   );
 }

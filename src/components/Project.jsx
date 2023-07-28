@@ -5,8 +5,8 @@ import { AddPeli } from './PelisProject/AddPeli'
 import { useState } from 'react'
 
 export const Project = () => {
-    
-    const [listadoState,setListadoState] = useState([]); 
+
+    const [listadoState, setListadoState] = useState([]);
 
     return (
         <div className='layout'>
@@ -29,8 +29,8 @@ export const Project = () => {
                 <Peliculas listadoState={listadoState} setListadoState={setListadoState} /> {/* Componte aparte */}
             </main>
             <aside className='lateral'>
-                <Buscador listadoState={listadoState} setListadoState={setListadoState}/> {/* Componte aparte */}
-                <AddPeli setListadoState={setListadoState}/> {/* Componente aparte */}
+                <Buscador setListadoState={setListadoState} listadoState={listadoState}/> {/* Componte aparte */}
+                <AddPeli setListadoState={setListadoState} /> {/* Componente aparte */}
             </aside>
             <footer className='footer'>
                 <p className='paragraph'><strong>&copy;</strong> Master en JavaScript</p>

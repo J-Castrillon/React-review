@@ -1,40 +1,37 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-export const Buscador = ({ listadoState, setListadoState }) => {
+export const Buscador = ({ setListadoState, listadoState }) => {
 
-    const [busqueda, setBusqueda] = useState("");
-    const [notFound,setNotFound] = useState(false); 
+    const [searched, setSearched] = useState("");
+    const [notFound, setNotFound] = useState(false);
 
-    const buscarPeli = e => {
-        setBusqueda(e.target.value);
+    const search = (e) => {
+        setSearched(e.target.value); // Pisa los valores tecleados; 
 
-        let finds = listadoState.filter(peli => {
-            return peli.title.toLowerCase().includes(busqueda.toLowerCase());
-        });
+        let founds = listadoState.filter(peli => peli.title.toLowerCase().includes(searched.toLocaleLowerCase()));
 
-        // Búsqueda mínimo de 3 letras y si es erróneo, que las muestre todas; 
-        if (busqueda.length <= 1 || finds == 0) {
-            finds = JSON.parse(localStorage.getItem('Pelis'));
-            setNotFound(true); 
-        }else
-            setNotFound(false); 
+        if (searched.length <= 1 || founds == 0) {
+            founds = JSON.parse(localStorage.getItem('Pelis'));
+            setNotFound(true);
+        } else
+            setNotFound(false);
 
-        // Actualización del estado; 
-        setListadoState(finds);
+        setListadoState(founds); 
     }
 
     return (
         <div className="search">
-            <h3 className='title'>Buscador : {busqueda}</h3>
+            <h3 className='title'>Busqueda: {searched}</h3>
             {
-                (notFound == true && busqueda.length > 2) && <span className='not-found'>No hay coincidencias con la búsqueda</span>
+                (searched.length > 2 && notFound === true) && (<span className='not-found'>No se encontraron coincidencias</span>)
             }
             <form action="#">
                 <input type="text"
                     name="sought"
                     id="sought"
                     autoComplete='off'
-                    onChange={e => buscarPeli(e)} />
+                    onChange={e => search(e)}
+                />
                 <button>Buscar</button>
             </form>
         </div>

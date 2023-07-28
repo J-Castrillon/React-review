@@ -5,13 +5,14 @@ import { Edit } from './Edit';
 export const Peliculas = ({ listadoState, setListadoState }) => {
 
     //   const [listadoState, setListadoState] = useState([]); Está en Project.jsx; 
-
-    const [edit,setEdit] = useState(0); 
+   
+    const [edit,setEdit] = useState(0); // Id de cada película seleccionada; 
 
     useEffect(() => {
         conseguirPelis();
     }, [])
 
+    // Llamado al LocalStorage; 
     const conseguirPelis = () => {
         let peliculas = JSON.parse(localStorage.getItem('Pelis'));
         setListadoState(peliculas);
@@ -38,20 +39,20 @@ export const Peliculas = ({ listadoState, setListadoState }) => {
                         <article className="peli-item" key={peli.id}>
                             <h3 className="title">{peli.title}</h3>
                             <p className="description">{peli.description}</p>
-                            <button className="update" onClick={()=>{setEdit(peli.id)}}>Editar</button> {/* Actualizamos el estado */}
+                            <button className="update" onClick={()=>setEdit(peli.id)}>Editar</button> {/* Actualizamos el estado */}
                             <button className="delete" onClick={() => borrarPeli(peli.id)}>Eliminar</button>
 
-                            {/* Formulario de editar */ }
+                            {/* Formulario de editar */}
                             {
                                 edit === peli.id && (
-                                    <Edit peli={peli} conseguirPelis={conseguirPelis} 
+                                    <Edit peli={peli} 
+                                    conseguirPelis={conseguirPelis}
                                     setListadoState={setListadoState}
-                                    setEdit={setEdit}/>
+                                    setEdit={setEdit} />
                                 )
                             }
                         </article>
                     );
-
 
                 }) : <h3>No hay películas para mostrar</h3>
             }
