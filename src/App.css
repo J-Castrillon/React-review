@@ -230,6 +230,20 @@ html{
   object-fit: cover;
 }
 
+.navigator ol li{
+  display: inline;
+}
+
+.links{
+  font-size: 1.4rem;
+  color: white;
+  text-decoration: none;
+  margin: 5px; 
+}
+
+.active{
+  color: red;
+}
 
 
 

@@ -40,14 +40,14 @@ export const Ajax = () => {
     }, [])
 
     // Utilizando promesas y peticiones Ajax con fetch;
-    // Para este ejemplo puede hacerse también sin el asyn y el await; 
+    // Para este ejemplo puede hacerse también sin el async y el await; 
     const fetchUsuarios = () => {
 
         setTimeout(async () => {
             let url = 'https://reqres.in/api/users?page=1'; 
             let urlMala = 'https://reqres.in/api/?page=1'; 
 
-            await fetch(urlMala)
+            await fetch(url)
                 .then(response => {
                     if (!response.ok)
                         throw new Error(`ERROR HTTP: ${response.status}`);
@@ -55,6 +55,7 @@ export const Ajax = () => {
                     return response.json();
                 })
                 .then(data => {
+                    console.log(data); 
                     setUsuariosAjax(data.data);
                     setLoading(false);
                 })

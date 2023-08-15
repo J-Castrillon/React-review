@@ -57,7 +57,6 @@ function App() {
 
 
   }
-
   
   // Obtener el año actual; 
   const date = new Date();
