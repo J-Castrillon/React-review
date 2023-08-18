@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 
 export const Contact = () => {
 
-    const navi = useNavigate(); 
+    const navi = useNavigate(); // Hook que nos permite realizar una redirección; 
 
     const redirect = e =>{
         navi("/compras"); 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import { NavLink, Outlet } from 'react-router-dom'
 
 export const Cursos = () => {
 
@@ -8,15 +8,15 @@ export const Cursos = () => {
             <h1>Esta es la página de Compras</h1>
             <nav className='navigator'>
                 <ol>
-                    <li><Link to="/compras/javascript" className='links'>JavaScript</Link></li>
-                    <li><Link to="/compras/react" className='links'>React</Link></li>
+                    <li><NavLink to="/compras/javascript" className='links'>JavaScript</NavLink></li>
+                    <li><NavLink to="/compras/react" className='links'>ReactJS</NavLink></li>
                 </ol>
             </nav>
 
-            <section id="results">
+            {/* Apartado donde mostrar los resultados  de las subrutas*/}
+            <section id='results'>
                 <div>
-                    {/* Salida de los componentes/subrutas */}
-                    <Outlet /> 
+                    <Outlet /> {/* Esto quiere decir que aquí se van a mostrar los resultados de las subrutas */}
                 </div>
             </section>
         </div>

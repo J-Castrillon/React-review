@@ -68,184 +68,403 @@
 } */
 
 /* Código para el proyecto del login */
-html{
-  font-size: 62.5%; 
+html {
+  font-size: 62.5%;
 }
-*{
-  box-sizing: border-box; 
-  margin: 0; 
-  padding: 0; 
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 
-.App{
-  width: 100vw; 
+.App {
+  width: 100vw;
   height: 100vh;
   /* overflow-y: hidden; */
 }
 
- #login-content{
-  width: 100%; 
+#login-content {
+  width: 100%;
   height: 100%;
   display: flex;
 }
 
-.image{
-  width: 50%; 
+.image {
+  width: 50%;
   height: 100%;
 }
 
-#image-figure{
+#image-figure {
   width: 100%;
   height: 100%;
 }
 
-#image{
-  width: 100%;  
+#image {
+  width: 100%;
 }
 
-#form-section{
-  width: 50%; 
+#form-section {
+  width: 50%;
   height: 100%;
 }
 
-#form-login{
-  width: 100%; 
+#form-login {
+  width: 100%;
   height: 50%;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
-.inputs-content{
-  width: 60%; 
+.inputs-content {
+  width: 60%;
   height: 20%;
-  display:flex; 
+  display: flex;
   flex-direction: column;
   justify-content: center;
   /* align-items: center; */
 }
 
-.inputs-content label{
+.inputs-content label {
   color: black;
   font-size: 1.2rem;
   font-weight: bolder;
   align-self: flex-start;
 }
 
-.inputs-content input{
-  margin-top: 2%; 
+.inputs-content input {
+  margin-top: 2%;
   width: 100%;
   height: 40%;
   border: 1px solid rgb(177, 177, 177);
-  border-radius: 2px; 
+  border-radius: 2px;
   /* margin-left: 5%; */
-  padding-left: 2%;  
+  padding-left: 2%;
   align-self: center;
 }
 
-#button-content{
-  width: 50%; 
+#button-content {
+  width: 50%;
   height: 10%;
 }
 
-#button-login{
+#button-login {
   background: #2F6AEC;
-  width: 100%; 
+  width: 100%;
   height: 100%;
-  border:none; 
+  border: none;
   color: white;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
-.display-center{
-  display: flex; 
+.display-center {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#content-api{
-  width: 100%; 
+#content-api {
+  width: 100%;
   height: 100%;
   flex-direction: column;
 }
 
-#header-api{
-  width: 100%; 
+#header-api {
+  width: 100%;
   height: 20%;
 }
-#form-api{
-  width: 100%; 
+
+#form-api {
+  width: 100%;
   height: 100%;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
-#form-api button{
-  margin-top: 2%; 
+#form-api button {
+  margin-top: 2%;
 }
 
-#results-main-content{
-  width: 100%; 
+#results-main-content {
+  width: 100%;
   height: 80%;
-  flex-direction: column; 
-  display: flex; 
+  flex-direction: column;
+  display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-#results-content{
-  width: 90%; 
+#results-content {
+  width: 90%;
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  flex-wrap: wrap; 
-  display: flex; 
-  flex-direction: column; 
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   text-align: center;
 }
 
-#gifs{
-  width: 100%; 
+#gifs {
+  width: 100%;
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  flex-wrap: wrap; 
-  flex-direction: row; 
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: flex-start;
-  display: flex; 
+  display: flex;
 }
 
-#gifs>div{
-  width: 20%; 
+#gifs>div {
+  width: 20%;
   height: 20%;
   margin: 2%;
   margin-top: 4%;
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.imgs{
-  width: 100%; 
+.imgs {
+  width: 100%;
   height: auto;
   object-fit: cover;
 }
 
-.navigator ol li{
+.navigator ol li {
   display: inline;
 }
 
-.links{
+.links {
   font-size: 1.4rem;
   color: white;
   text-decoration: none;
-  margin: 5px; 
+  margin: 5px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.active{
-  color: red;
+.active {
+  color: rgb(4, 153, 212);
+  font-weight: 600;
+}
+
+/* --------------- PROYECTO DEL PORTAFOLIO ------------- */
+.layout- {
+  width: 85%;
+  margin: auto;
+  height: 100%;
+}
+
+#header-portafolio {
+  display: flex;
+  width: 100%;
+  height: 10%;
+}
+
+.logotipo,
+#header-portafolio nav {
+  flex-grow: 1;
+  /* Esta linea ayuda a que los elementos ocupen el mismo espacio */
+}
+
+.logotipo span {
+  display: block;
+  font-size: 50px;
+  font-weight: bolder;
+  color: rgb(126, 126, 126);
+}
+
+.logotipo {
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logotipo h2 {
+  display: block;
+  flex-basis: 40px;
+  margin-left: 10px;
+  color: white;
+}
+
+.links-ul {
+  display: flex;
+  list-style: none;
+  height: 100%;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.links-ul li {
+  margin: 1%;
+}
+
+.links-ul li a:hover {
+  color: rgb(0, 77, 219);
+  font-weight: 600;
+  transition: 200ms;
+}
+
+#portfolio-outlet {
+  width: 100%;
+  height: auto;
+  /* overflow-y: auto; */
+}
+
+#footer-portfolio {
+  text-align: center;
+  font-size: 1.3rem;
+  /* margin-top: 35px;  */
+  border-top: 2px solid black;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer-portfolio p {
+  color: gray;
+  font-weight: 400;
 }
 
 
+/* Cada una de las rutas */
+.heading,
+.home .heading {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-size: 3.3rem;
+  color: rgb(187, 187, 187);
+}
 
+.home #profesion {
+  color: rgb(1, 107, 168);
+}
 
+.home h3 {
+  margin-top: 2%;
+  color: gray;
+  font-weight: 500;
+  font-size: 2rem;
+}
 
+.home a {
+  padding: 0.4%;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  background-color: #0b70e1;
+}
+
+.home a:hover {
+  background-color: #0a60c2;
+  transition: 200ms;
+}
+
+#last-works {
+  margin-top: 6%;
+}
+
+.paragraph {
+  font-size: 1.7rem;
+  color: gray;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.contact-form label {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.contact-form input {
+  width: 80%;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  background: rgb(228, 227, 227);
+  padding-left: 10px;
+}
+
+.contact-form input:focus {
+  border-color: white;
+  outline: 2px solid 0b70e1;
+}
+
+/* Cada uno de los proyectos */
+.works {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.article-projects {
+  flex-wrap: 1;
+  flex-basis: 50%;
+}
+
+.article-projects p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: white;
+}
+
+.article-projects a {
+  text-decoration: none;
+  color: #0b70e1;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.article-projects hr {
+  width: 80%;
+}
+
+.article-projects h3 {
+  color: rgb(206, 206, 206);
+}
+
+.article-projects h3:hover {
+  color: #0b70e1; 
+}
+
+.strong-projects {
+  color: rgb(201, 201, 201);
+}
+
+.images {
+  width: 90%;
+  height: auto;
+  overflow: hidden;
+  border: 1px solid #eee; 
+  box-shadow: 0px 5px 12px gray;
+  margin-bottom: 5%;
+}
+
+.images img {
+  width: 100%;
+  height: auto;
+}
+
+.images img:hover {
+  width: 110%;
+  height: auto;
+  transition: all 200ms; 
+}
+
+.images img:not(:hover) {
+  width: 100%;
+  height: auto;
+  transition: all 200ms; 
+}

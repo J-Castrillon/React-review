@@ -4,7 +4,6 @@ import { Inicio } from '../Routes/Inicio';
 import { Error } from '../Routes/Error';
 import { Articulos } from '../Routes/Articulos';
 import { Contact } from '../Routes/Contact';
-import { Compras } from '../Routes/Compras';
 import { Cursos } from '../Routes/ComprasPanel/Cursos';
 import { JavaScriptCourse } from '../Routes/ComprasPanel/JavaScriptCourse';
 import { ReactCourse } from '../Routes/ComprasPanel/ReactCourse';
@@ -19,13 +18,13 @@ export const RouterPrincipal = () => {
     return (
         // Debo retornar la configuración de todas las rutas; 
         <BrowserRouter>
-
             {/* Creación de un navegador */}
             <nav className="navigator">
                 <ol>
                     <li><NavLink to="/inicio" className={({ isActive }) => activeClass(isActive)}>Inicio</NavLink></li>
                     <li><NavLink to="/articulos" className={({ isActive }) => activeClass(isActive)}>Articulos</NavLink></li>
                     <li><NavLink to="/contacto" className={({ isActive }) => activeClass(isActive)}>Contacto</NavLink></li>
+                    <li><NavLink to="/compras" className={({isActive}) => activeClass(isActive)}>Compras</NavLink></li>
                 </ol>
             </nav>
 
@@ -41,9 +40,10 @@ export const RouterPrincipal = () => {
 
                 {/* Subrutas */}
                 <Route path="/compras/*" element={<Cursos />}>
+                    {/* Cada una de las subrutas */}
                     <Route path="javascript" element={<JavaScriptCourse />}></Route>
                     <Route path="react" element={<ReactCourse />}></Route>
-                </Route>
+                </Route>                
             </Routes>
         </BrowserRouter>
     )

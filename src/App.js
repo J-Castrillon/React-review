@@ -11,6 +11,8 @@ import { Giphy } from './components/Giphy';
 import { Forms } from './components/Forms';
 import { Project } from './components/Project';
 import { RouterPrincipal } from './components/Routers/RouterPrincipal';
+import { RouterPortfolio } from './components/Routers/RouterPortfolio';
+import { MainPortfolio } from './components/Portfolio/MainPortfolio';
 
 
 function App() {
@@ -57,11 +59,11 @@ function App() {
 
 
   }
-  
+
   // Obtener el año actual; 
   const date = new Date();
-  const year = date.getFullYear(); 
-  
+  const year = date.getFullYear();
+
   return (
     <div className="App">
       {/* <MiComponente /> */}
@@ -74,7 +76,8 @@ function App() {
       {/* <Giphy /> */}
       {/* <Forms /> */}
       {/* <Project /> */}
-      <RouterPrincipal /> {/* Cargar el enrutador */}
+      {/* <RouterPrincipal /> */} {/* Cargar el enrutador */}
+      <RouterPortfolio />
     </div>
   );
 }
