@@ -459,12 +459,50 @@ html {
 
 .images img:hover {
   width: 110%;
-  height: auto;
   transition: all 200ms; 
 }
 
 .images img:not(:hover) {
   width: 100%;
-  height: auto;
   transition: all 200ms; 
+}
+
+#last-works a{
+  color: white; 
+}
+
+.normalDiv{
+  background: white; 
+  border: 2px solid black; 
+  color: black;
+  height: 100px;
+  width: 40%; 
+  margin-left: 20%; 
+  margin-top: 5%;
+  text-align: center; 
+  font-size: 1.5rem; 
+}
+
+.background-green{
+  background: green;
+  border: 2px solid black; 
+  color: black;
+  height: 100px;
+  width: 40%; 
+  margin-left: 20%; 
+  margin-top: 5%;
+  text-align: center; 
+  font-size: 1.5rem; 
+}
+
+.background-red{
+  background: red; 
+  border: 2px solid black; 
+  color: black;
+  height: 100px;
+  width: 40%; 
+  margin-left: 20%; 
+  margin-top: 5%;
+  text-align: center; 
+  font-size: 1.5rem; 
 }

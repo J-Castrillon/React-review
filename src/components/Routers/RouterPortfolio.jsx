@@ -7,6 +7,7 @@ import { Services } from '../Portfolio/routesPortfolio/Services';
 import { Curriculum } from '../Portfolio/routesPortfolio/Curriculum';
 import { Error } from '../Routes/Error';
 import { Home } from '../Portfolio/routesPortfolio/Home';
+import { Detail } from '../Portfolio/routesPortfolio/Detail';
 
 export const RouterPortfolio = () => {
     return (
@@ -19,6 +20,7 @@ export const RouterPortfolio = () => {
                     <Route path='contact' element={<Contact />}></Route>
                     <Route path='services' element={<Services />}></Route>
                     <Route path='curriculum' element={<Curriculum />}></Route>
+                    <Route path='proyecto/:id' element={<Detail />}></Route>
                 </Route>
                 <Route path='*' element={<Error/>}></Route>
             </Routes>

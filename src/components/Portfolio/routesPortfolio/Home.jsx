@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { ListWorks } from './ListWorks'
 
 export const Home = () => {
   return (
@@ -18,9 +19,7 @@ export const Home = () => {
         <h2>Algunos de mis proyectos</h2>
         <p className='paragraph'>Estos son algunos de mis trabajos de desarrollo web</p>
 
-        <div id='works'>
-
-        </div>
+        <ListWorks projectLimit="3"/>
       </section>
     </div>
   )
