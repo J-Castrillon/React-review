@@ -8,7 +8,7 @@ import React, { useEffect, useState } from "react";
 // En este caso queremos decir que si la dependencia (en este caso la prop) page cambia, que recalcule el resultado
 // y lo devuelva. 
 
-export const Employees = React.memo(({page}) => {
+export const Employees = React.memo(({page, message}) => {
   const [employees, setEmployees] = useState([]);
 
   const getEmployees = async (numberPage) => {
@@ -29,6 +29,8 @@ export const Employees = React.memo(({page}) => {
         setError(`Ocurrió un error HTTP: ${error.message}`);
       });
   };
+
+  message();
 
   useEffect(() => {
     getEmployees(page);

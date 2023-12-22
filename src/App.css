@@ -505,3 +505,13 @@ html {
   flex-direction: column;
   margin: 5px;
 }
+
+.mobile{
+  width: 150px;
+  height: auto;
+}
+
+.desktop{
+  width: 300px;
+  height: auto;
+}
