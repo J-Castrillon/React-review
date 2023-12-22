@@ -15,6 +15,7 @@ export const UseRef = () => {
 
     useEffect(()=>{
         // Para el segundo ejemplo; 
+        // Funciona de manera similar a colocarlo directamente, pero en este caso se coloca el valor más actualizado sin necesidad de ejecutar todos los setTimeOut; 
         saludoEnCola.current = numeroSaludo; 
         setTimeout(()=>{
             console.log(`Saludos: ${saludoEnCola.current}`); 

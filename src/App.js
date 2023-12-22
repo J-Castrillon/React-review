@@ -14,6 +14,7 @@ import { RouterPrincipal } from './components/Routers/RouterPrincipal';
 import { RouterPortfolio } from './components/Routers/RouterPortfolio';
 import { MainPortfolio } from './components/Portfolio/MainPortfolio';
 import { UseRef } from './components/UseRef';
+import { UseMemo } from './components/Memory/UseMemo';
 
 
 function App() {
@@ -79,7 +80,8 @@ function App() {
       {/* <Project /> */}
       {/* <RouterPrincipal /> */} {/* Cargar el enrutador */}
       {/* <RouterPortfolio /> */}
-      <UseRef />
+      {/* <UseRef /> */}
+      <UseMemo/>
     </div>
   );
 }

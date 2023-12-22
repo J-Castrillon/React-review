@@ -21,8 +21,8 @@ export const RouterPortfolio = () => {
                     <Route path='services' element={<Services />}></Route>
                     <Route path='curriculum' element={<Curriculum />}></Route>
                     <Route path='proyecto/:id' element={<Detail />}></Route>
+                    <Route path='*' element={<Error />}></Route>
                 </Route>
-                <Route path='*' element={<Error/>}></Route>
             </Routes>
         </BrowserRouter>
     )

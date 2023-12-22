@@ -485,24 +485,23 @@ html {
 
 .background-green{
   background: green;
-  border: 2px solid black; 
-  color: black;
-  height: 100px;
-  width: 40%; 
-  margin-left: 20%; 
-  margin-top: 5%;
-  text-align: center; 
-  font-size: 1.5rem; 
 }
 
 .background-red{
   background: red; 
-  border: 2px solid black; 
-  color: black;
-  height: 100px;
-  width: 40%; 
-  margin-left: 20%; 
-  margin-top: 5%;
-  text-align: center; 
-  font-size: 1.5rem; 
+}
+
+
+/* Memo */
+.list-memo{
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: center;
+}
+
+.list-memo>li{
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
 }
