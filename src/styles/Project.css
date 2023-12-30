@@ -116,7 +116,7 @@ h1{
     flex-grow: 1; /* Permite que se reparta de mejor manera el espacio interno */
 }
 
-button,
+ button,
 input[type="submit"],
 input[type="button"] {
     width: 100px;
@@ -128,7 +128,6 @@ input[type="button"] {
     border-radius: 3px;
     margin: 10px;
     text-transform: capitalize;
-    /* Esto hace que la primera letra sea mayúscula */
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;

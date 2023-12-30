@@ -16,6 +16,7 @@ import { MainPortfolio } from "./components/Portfolio/MainPortfolio";
 import { UseRef } from "./components/UseRef";
 import { UseMemo } from "./components/Memory/UseMemo";
 import { UseLayout } from "./components/layoutVsEffect/useLayout";
+import { Juegos } from "./components/Reducers/components/juegos";
 
 function App() {
   const nombreTienda = "MidToyota";
@@ -83,7 +84,8 @@ function App() {
       {/* <RouterPortfolio /> */}
       {/* <UseRef /> */}
       {/* <UseMemo/> */}
-      <UseLayout />
+      {/* <UseLayout /> */}
+      <Juegos/> {/* Reducers */}
     </div>
   );
 }
