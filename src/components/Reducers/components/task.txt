@@ -1,2 +1,0 @@
-1. Realizar un reducer para incrementar y decrementar un contador.
-2. Implementar ese reducer. 

@@ -11,6 +11,10 @@ export const JuegoReducer = (state = [], action) => {
       return [...state, action.payload]; // El payload son los datos que quiero almacenar en el estado;
     case "borrar": 
       return state.filter(juego => juego.id !== action.payload) // Actualiza el estado con todos los que son diferentes al id que pasamos por el payload; 
+    case "editar": 
+      const index = state.findIndex(juego => juego.id === action.payload.id);
+      state[index] = action.payload
+      return [...state] // Como se debe pasar un estado, se expande el que ya habia y con eso lo tenemos listo; 
     default:
       return state; // Siempre debe retornarse el estado, fijarse en el anterior return, donde tambien se devuelve el estado, pero expandido;
   }

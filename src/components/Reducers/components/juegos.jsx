@@ -41,9 +41,22 @@ export const Juegos = () => {
 
     // Disparar el reducer y provocar el cambio en el estado; 
     dispatch(accion);
-
-    console.log(juego);
   };
+
+  const editar = (e,id) =>{
+    const game = {
+      id,
+      titulo: e.target.value,
+      description: e.target.value,
+    };
+
+    const action = {
+      type: 'editar',
+      payload: game 
+    }
+
+    dispatch(action);
+  }
 
   return (
     <div>
@@ -56,6 +69,13 @@ export const Juegos = () => {
             <li key={index} className="game">
               {element.titulo}
               &nbsp; <button className="buttonTrash" onClick={e=> trash(element.id)}>X</button>
+              <input type="text" name="editign" id="editign" 
+                        onKeyDown={e=>{
+                          if(e.key === 'Enter'){
+                            editar(e, element.id);
+                          }
+                        }}
+              />
             </li>
           );
         })}

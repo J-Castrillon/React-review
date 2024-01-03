@@ -17,6 +17,7 @@ import { UseRef } from "./components/UseRef";
 import { UseMemo } from "./components/Memory/UseMemo";
 import { UseLayout } from "./components/layoutVsEffect/useLayout";
 import { Juegos } from "./components/Reducers/components/juegos";
+import { Count } from './components/Reducers/components/Count'; 
 
 function App() {
   const nombreTienda = "MidToyota";
@@ -86,6 +87,7 @@ function App() {
       {/* <UseMemo/> */}
       {/* <UseLayout /> */}
       <Juegos/> {/* Reducers */}
+      <Count/>
     </div>
   );
 }
