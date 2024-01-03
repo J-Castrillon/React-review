@@ -17,7 +17,9 @@ import { UseRef } from "./components/UseRef";
 import { UseMemo } from "./components/Memory/UseMemo";
 import { UseLayout } from "./components/layoutVsEffect/useLayout";
 import { Juegos } from "./components/Reducers/components/juegos";
-import { Count } from './components/Reducers/components/Count'; 
+import { Count } from "./components/Reducers/components/Count";
+import { AppRouter } from "./components/useContext/Routers/AppRouter";
+import { PruebaContext } from "./context/pruebaContext";
 
 function App() {
   const nombreTienda = "MidToyota";
@@ -69,6 +71,12 @@ function App() {
   const date = new Date();
   const year = date.getFullYear();
 
+  const cursos = {
+    id: 1, 
+    titulo: 'Master en MERN', 
+    descripcion: 'Estudiando las tecnologias de MERN a profundidad'
+  }
+
   return (
     <div className="App">
       {/* <MiComponente /> */}
@@ -86,8 +94,15 @@ function App() {
       {/* <UseRef /> */}
       {/* <UseMemo/> */}
       {/* <UseLayout /> */}
-      <Juegos/> {/* Reducers */}
-      <Count/>
+      {/* Reducers */}
+      {/* <Juegos/> 
+      <Count/> */}
+      <PruebaContext.Provider value={cursos}>
+        {/* Estamos diciendo que todos los componentes envueltos 
+          por el contexto 'PruebaContext', van a compartir el valor 
+          pasado a traves del provider y la propiedad value */}
+        <AppRouter />
+      </PruebaContext.Provider>
     </div>
   );
 }
