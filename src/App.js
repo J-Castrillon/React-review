@@ -20,6 +20,11 @@ import { Juegos } from "./components/Reducers/components/juegos";
 import { Count } from "./components/Reducers/components/Count";
 import { AppRouter } from "./components/useContext/Routers/AppRouter";
 import { PruebaContext } from "./context/pruebaContext";
+import { useEffect, useState } from "react";
+import { UseId } from "./components/Id/UseId";
+import { Custom } from "./components/Hooks/components/Custom";
+import { Formulario } from "./components/Hooks/components/Formulario";
+import { Usuario } from "./components/Hooks/components/Usuario";
 
 function App() {
   const nombreTienda = "MidToyota";
@@ -72,10 +77,22 @@ function App() {
   const year = date.getFullYear();
 
   const cursos = {
-    id: 1, 
-    titulo: 'Master en MERN', 
-    descripcion: 'Estudiando las tecnologias de MERN a profundidad'
-  }
+    id: 1,
+    titulo: "Master en MERN",
+    descripcion: "Estudiando las tecnologias de MERN a profundidad",
+  };
+
+  const [usuario, setUsuario] = useState({});
+
+  useEffect(() => {
+    // Persistencia de los datos;
+    const logueado = JSON.parse(localStorage.getItem("usuario"));
+    setUsuario(logueado);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("usuario", JSON.stringify(usuario));
+  }, [usuario]);
 
   return (
     <div className="App">
@@ -97,12 +114,20 @@ function App() {
       {/* Reducers */}
       {/* <Juegos/> 
       <Count/> */}
-      <PruebaContext.Provider value={cursos}>
-        {/* Estamos diciendo que todos los componentes envueltos 
+
+
+      {/* Estamos diciendo que todos los componentes envueltos 
           por el contexto 'PruebaContext', van a compartir el valor 
           pasado a traves del provider y la propiedad value */}
+      {/* Pasando un useState */}
+      {/* <PruebaContext.Provider value={{ usuario, setUsuario }}>
         <AppRouter />
-      </PruebaContext.Provider>
+      </PruebaContext.Provider> */}
+
+      {/* <UseId/> */}
+      {/* <Custom/> */}
+      {/* <Formulario/> */}
+      <Usuario/>
     </div>
   );
 }

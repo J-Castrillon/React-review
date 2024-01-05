@@ -592,3 +592,10 @@ body{
 .useContextTitles{
   color: black;
 }
+
+.login input{
+  display: block;
+  margin: 15px; 
+  padding: 15px; 
+  
+}

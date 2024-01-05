@@ -117,7 +117,7 @@ h1{
 }
 
  button,
-input[type="submit"],
+/* input[type="submit"], */
 input[type="button"] {
     width: 100px;
     background: #0b70e1;
