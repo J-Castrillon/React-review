@@ -5,15 +5,10 @@ export const UseMemo = () => {
   const [gestor, setGestor] = useState("Julián");
   const [page, setPage] = useState(1);
   const gestorName = useRef(gestor);
-  // const [count, setCount] = useState(0);
 
   const changeGestor = () => {
     setGestor(gestorName.current.value); // Esta es la mejor manera de hacerlo;
   };
-
-  // const changePage = () => {
-  //   setPage((prevPage) => prevPage + 1);
-  // };
 
   // Hook useCallback, memorizacion de funciones. 
   // La clave aqui es que cada vez que se renderiza este componente useMemo, se crea nuevamente la funcion, por lo cual
